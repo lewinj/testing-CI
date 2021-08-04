@@ -31,5 +31,5 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: filemake
-        run: python -c "open("itworks.txt", "w")"
+        run: python -c "f = open("itworks.txt", "w")"
           
