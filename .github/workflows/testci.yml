@@ -31,14 +31,16 @@ jobs:
           python-version: '3.7'
           # Optional - x64 or x86 architecture, defaults to x64
           architecture: 'x64'
-      - name: Install Openmodelic
+      - name: Download Openmodelica
         run: for deb in deb deb-src; do echo "$deb http://build.openmodelica.org/apt `lsb_release -cs` release"; done | sudo tee /etc/apt/sources.list.d/openmodelica.list
       
       - name: Import GPG Key
         run: wget -q http://build.openmodelica.org/apt/openmodelica.asc -O- | sudo apt-key add - 
         
-      - name: Update And Install
+      - name: Update Openmodelica
         run: sudo apt update
-             sudo apt install openmodelica
+        
+      - name: Install Openmodelica
+        run: sudo apt install openmodelica
       
           
