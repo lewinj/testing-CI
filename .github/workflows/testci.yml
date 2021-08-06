@@ -38,5 +38,8 @@ jobs:
         
       - name: Install Openmodelica
         run: sudo apt install openmodelica
+        
+      - name: Run Pendulum model
+        run: omc 
       
           
