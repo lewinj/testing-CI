@@ -39,10 +39,12 @@ jobs:
       - name: Install Openmodelica
         run: sudo apt install openmodelica
         
+      - name: Install Libraries
+        run: for PKG in `apt-cache search "omlib-.*" | cut -d" " -f1`; do sudo apt-get install -y "$PKG"; done
+        
       - name: Run Pendulum model
         run: omc pendulumTest.mos
         
-      - name: Install Library
-        run: for PKG in `apt-cache search "omlib-.*" | cut -d" " -f1`; do sudo apt-get install -y "$PKG"; done
+
       
           
