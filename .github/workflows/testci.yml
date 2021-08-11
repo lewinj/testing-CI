@@ -43,7 +43,7 @@ jobs:
         run: for PKG in `apt-cache search "omlib-.*" | cut -d" " -f1`; do sudo apt-get install -y "$PKG"; done
         
       - name: Run Pendulum model
-        run: omc pendulumTest.mos
+        run: omc pendulum.mos
         
 
       
