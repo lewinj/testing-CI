@@ -44,11 +44,11 @@ jobs:
       - name: Install Openmodelica
         run: sudo apt install openmodelica
         
-      - name: parse problem file
-        run: curl -s /home/runner/.openmodelica/libraries/index.json
-        
       - name: Run Pendulum model
         run: omc pendulum.mos
+        
+      - name: parse problem file
+        run: curl -s /home/runner/.openmodelica/libraries/index.json
         
 
       
