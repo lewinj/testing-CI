@@ -45,7 +45,7 @@ jobs:
         run: sudo apt install openmodelica
         
       - name: Run Pendulum model
-        run: omc pendulum.mos
+        run: python PendulumTest.py
 
         
 
