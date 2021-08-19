@@ -47,8 +47,11 @@ jobs:
       - name: Install OMPython
         run: python -m pip install -U https://github.com/OpenModelica/OMPython/archive/master.zip
         
-      - name: Run Pendulum model
+      - name: Run Pendulum Model
         run: python PendulumTest.py
+        
+      - name: Get Result File
+        run: git add /home/runner/work/testing-CI/testing-CI/BouncingBall_res.mat
               
 
         
