@@ -48,14 +48,7 @@ jobs:
         run: python -m pip install -U https://github.com/OpenModelica/OMPython/archive/master.zip
         
       - name: Run Pendulum model
-        run: |
-              from OMPython import OMCSessionZMQ
-              omc = OMCSessionZMQ()
-              omc.sendExpression("getVersion()")
-              omc.sendExpression("cd()")
-              omc.sendExpression("loadModel(Modelica)")
-              omc.sendExpression("loadFile(getInstallationDirectoryPath() + \"/share/doc/omc/testmodels/BouncingBall.mo\")")
-              omc.sendExpression("instantiateModel(BouncingBall)")
+        run: python PendulumTest.py
               
 
         
