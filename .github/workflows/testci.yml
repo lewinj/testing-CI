@@ -44,6 +44,9 @@ jobs:
       - name: Install Openmodelica
         run: sudo apt install openmodelica
         
+      - name: Install OMPython
+        run: python -m pip install -U https://github.com/OpenModelica/OMPython/archive/master.zip
+        
       - name: Run Pendulum model
         run: python PendulumTest.py
 
