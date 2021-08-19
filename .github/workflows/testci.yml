@@ -65,10 +65,6 @@ jobs:
           # Default: depends on the default_author input
           author_email: jblewin100@gmail.com
 
-          # Name of the branch to use, if different from the one that triggered the workflow
-          # Default: the branch that triggered the run
-          branch: some-branch
-
           # The local path to the directory where your repository is located. You should use actions/checkout first to set it up
           # Default: '.'
           cwd: '.'
@@ -86,7 +82,7 @@ jobs:
 
           # The flag used on the pull strategy. Use NO-PULL to avoid the action pulling at all.
           # Default: '--no-rebase'
-          pull_strategy: 'NO-PULL or --no-rebase or --no-ff or --rebase'
+          pull_strategy: 'NO-PULL'
 
           # Whether to push the commit and, if any, its tags to the repo. It can also be used to set the git push arguments (see the paragraph below for more info)
           # Default: true
@@ -94,7 +90,7 @@ jobs:
 
           # The arguments for the `git rm` command (see the paragraph below for more info)
           # Default: ''
-          remove: './dir/old_file.js'
+          remove: '.'
 
           # Whether to use the --signoff option on `git commit` (only boolean values accepted*)
           # Default: false
