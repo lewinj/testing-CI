@@ -51,7 +51,10 @@ jobs:
         run: python PendulumTest.py
         
       - name: Get Result File
-        run: git add /home/runner/work/testing-CI/testing-CI/BouncingBall_res.mat
+        run: |
+              git add /home/runner/work/testing-CI/testing-CI/BouncingBall_res.mat
+              git commit -m "Add existing file"
+              
               
 
         
