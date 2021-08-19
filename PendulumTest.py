@@ -5,3 +5,5 @@ omc.sendExpression("cd()")
 omc.sendExpression("loadModel(Modelica)")
 omc.sendExpression("loadFile(getInstallationDirectoryPath() + \"/share/doc/omc/testmodels/BouncingBall.mo\")")
 omc.sendExpression("instantiateModel(BouncingBall)")
+mod=ModelicaSystem(model_path + "BouncingBall.mo","BouncingBall",["Modelica"])
+mod.simulate() // method-1 default result file name will be used
