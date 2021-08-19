@@ -48,7 +48,7 @@ jobs:
         run: python -m pip install -U https://github.com/OpenModelica/OMPython/archive/master.zip
         
       - name: Run Pendulum model
-        run: python PendulumTest.py
+        run: python pendulumTest.py
 
         
 
